@@ -1,0 +1,84 @@
+<!-- Footer partial -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <span class="footer-logo">🤖 <b>Aliep<span style='color:#ffd166'>Course</span></b></span>
+        <span class="footer-desc">Media Pembelajaran Kecerdasan Buatan</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="materi.html">Materi</a>
+        <a href="tentang.html">Tentang</a>
+      </nav>
+    </div>
+    <hr class="footer-sep" style="border:0;border-top:1.5px solid #23303e;margin:18px 0 10px 0;">
+    <div class="footer-meta">
+      <p style="margin:0;font-size:0.98em;opacity:0.85;">© 2026 | Muhammad Aliep (NIM: 231011401062) - Teknik Informatika<br>Website ini dibuat untuk <b>UAS Pemrograman Web I</b></p>
+    </div>
+  </div>
+</footer>
+<style>
+.site-footer {
+  background: linear-gradient(90deg,#16222a 0%, #1abc9c 100%);
+  color: #dfeef7;
+  padding: 32px 0 18px 0;
+  border-top: 4px solid #1abc9c;
+  margin-top: 36px;
+  font-size: 1.05em;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.footer-logo {
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.footer-desc {
+  font-size: 0.98em;
+  opacity: 0.85;
+}
+.footer-nav {
+  display: flex;
+  gap: 18px;
+}
+.footer-nav a {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer-nav a:hover {
+  color: #fff;
+}
+.footer-sep {
+  width: 100%;
+  opacity: 0.18;
+}
+.footer-meta {
+  text-align: center;
+  margin-top: 2px;
+}
+@media (max-width: 700px) {
+  .footer-main { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .footer-nav { gap: 10px; }
+  .footer-inner { padding: 0 8px; }
+}
+</style>

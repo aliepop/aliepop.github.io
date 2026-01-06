@@ -34,13 +34,117 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #1abc9c;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card-body {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.card-body img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.materi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.materi-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+    padding: 20px 18px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 1.5px solid #e0ecef;
+    min-height: 420px;
+}
+.materi-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.16);
+    border-color: #1abc9c;
+}
+.materi-card h3 {
+    margin: 16px 0 6px 0;
+    font-size: 1.2rem;
+    color: #1abc9c;
+    font-weight: 700;
+    text-align: center;
+}
+.materi-card .subjudul {
+    color: #34495e;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+.materi-card .materi-img {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+.materi-card .btn {
+    margin-top: auto;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.materi-card {
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fafd 100%);
+    border: 1px solid rgba(27, 35, 45, 0.04);
+}
+
+.materi-card h3 {
+    margin-top: 0;
+}
+
+.materi-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
 .btn {
     display: inline-block;
-    background: #1abc9c;
+    background: linear-gradient(90deg,#1abc9c,#16a085);
     color: white;
-    padding: 10px 15px;
+    padding: 10px 16px;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(26, 188, 156, 0.12);
 }
 
 footer {
@@ -50,9 +154,103 @@ footer {
     padding: 10px;
 }
 
+/* New layout helpers */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Header updates */
+.site-header {
+    background: linear-gradient(90deg,#2c3e50 0%, #1abc9c 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+.brand .logo {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.brand .accent {
+    color: #ffd166;
+}
+.brand .tag {
+    margin: 4px 0 0;
+    font-size: 12px;
+    opacity: 0.95;
+}
+
+.site-nav {
+    display: flex;
+    gap: 10px;
+}
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+.site-nav a:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Footer updates */
+.site-footer {
+    background: #16222a;
+    color: #dfeef7;
+    padding: 18px 0;
+    border-top: 4px solid rgba(255,255,255,0.02);
+    margin-top: 36px;
+}
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.footer-nav a {
+    color: #dfeef7;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
 /* RESPONSIF */
 @media (max-width: 600px) {
     nav a {
         display: block;
     }
+    .materi-card {
+        min-height: 340px;
+        padding: 14px 8px 18px 8px;
+    }
+    .materi-card .materi-img {
+        max-width: 100%;
+        height: 110px;
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+    .header-inner { flex-wrap: wrap; gap: 10px; }
+    .nav-toggle { display: block; }
+    .site-nav { display: none; width: 100%; flex-direction: column; }
+    .site-nav.show { display: flex; }
+    .footer-inner { flex-direction: column; text-align: center; gap: 8px; }
 }
